@@ -34,6 +34,7 @@ The website is hosted to the localhost at port 8000 i.e (http://localhost:8000)
     |    +-- /templates
     |    |    +-- /home
     |    |    +-- /registration
+    |    |    +-- /blog
     |    __init__.py
     |    admin.py
     |    apps.py
@@ -49,7 +50,16 @@ The website is hosted to the localhost at port 8000 i.e (http://localhost:8000)
     |    models.py
     |    tests.py
     |    urls.py
-    |    views.py        
+    |    views.py 
+    +-- /blog
+    |   +-- /migrations
+    |    __init__.py
+    |    admin.py
+    |    apps.py
+    |    models.py
+    |    tests.py
+    |    urls.py
+    |    views.py       
     +-- /turobotics
     |    __init__.py
     |    settings.py
