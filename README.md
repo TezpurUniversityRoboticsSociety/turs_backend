@@ -1,15 +1,16 @@
 # Backend of the T.U.R.S. site.
 
+
 ## Prerequisites:
 
----
 * Python 3.4 +
 * Django 1.9 +
+
+---
 
 
 ## Run
 
----
 Open the main directory `/turobotics`
 ```
 python manage.py runserver
@@ -21,7 +22,6 @@ The website is hosted to the localhost at port 8000 i.e (http://localhost:8000)
 
 ## Directory Structure
 
----
 ```
 /turobotics
     +-- /home
@@ -58,3 +58,4 @@ The website is hosted to the localhost at port 8000 i.e (http://localhost:8000)
     db.sqlite3
     manage.py
 ```
+---
