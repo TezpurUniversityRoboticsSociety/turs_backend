@@ -11,7 +11,7 @@
 
 ## Run
 
-Open the main directory `/turobotics`
+Open the main directory
 ```
 python manage.py runserver
 ```
@@ -48,6 +48,7 @@ The website is hosted to the localhost at port 8000 i.e (http://localhost:8000)
     |    admin.py
     |    apps.py
     |    models.py
+    |    forms.py
     |    tests.py
     |    urls.py
     |    views.py 
