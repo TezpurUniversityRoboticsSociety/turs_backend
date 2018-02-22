@@ -1,0 +1,14 @@
+{% extends "home/header.html" %}
+
+{% block content %}
+<div class="container">
+    <h3>Registration Form</h3>
+    <h4>Get registered and be an member of TURS.</h4>
+    <form class="site-form" id="contact" action=" " method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Register">        
+    </form>
+</div>
+
+{% endblock %}

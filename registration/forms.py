@@ -1,12 +1,9 @@
 from django.db import models
 from django import forms
-from .models import RegistrationForm
+from .models import Student
 
 # Create your models here.
-class Form(forms.Form):
+class Form(forms.ModelForm):
     class Meta():
-        model = RegistrationForm
-        fields = ['name','roll','email','phone','course']
-
-    def __str__(self):
-        return self.name
+        model = Student
+        fields = ['name','roll','gender','email','phone','course','Photo','ID Card']
