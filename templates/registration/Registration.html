@@ -1,0 +1,97 @@
+{% extends 'home/header.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>T.U.R.S. Registration</title>
+	 <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700|Josefin+Sans" rel="stylesheet">
+
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body> 
+	<div class="container">
+		<h4>REGISTRATION</h4>
+		<h2>Join the T.U.R.S. Family</h2>
+		<hr class="style-two"></hr>
+		<div class="card">
+  			<div class="container">
+    			<h4><b>REGISTRATION FORM</b></h4>
+    			<form class="site-form" id="contact" action=" " method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+                    {{ form.non_field_errors }} 
+					<div class="form-group row">
+						{{ form.name.errors }}
+				    	<label for="{{ form.name.id_for_label }}" class="col-sm-2 col-form-label">Name:</label>
+				    	<div class="col-sm-10">
+							{{ form.name }}
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+						{{ form.roll.errors }}
+				    	<label for="{{ form.roll.id_for_label }}" class="col-sm-2 col-form-label">Roll:</label>
+				    	<div class="col-sm-10">
+				      		{{ form.roll }}
+				    	</div>
+				  	</div>
+  					<div class="form-group row">
+						{{ form.gender.errors }}
+				    	<label for="{{ form.gender.id_for_label }}" class="col-sm-2 col-form-label">Gender:</label>
+				    	<div class="col-sm-10">
+				      		{{ form.gender }}
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+						{{ form.email.errors }}
+    					<label for="{{ form.email.id_for_label }}" class="col-sm-2 col-form-label">Email: </label>
+    					<div class="col-sm-10">
+      						{{ form.email }}
+    					</div>
+  					</div>
+  					 <div class="form-group row">
+						{{ form.phone.errors }}
+				    	<label for="{{ form.phone.id_for_label }}" class="col-sm-2 col-form-label">Phone:</label>
+				    	<div class="col-sm-10">
+				      		{{ form.phone }}
+				    	</div>
+				  	</div>
+				  	<div class="form-group row">
+						{{ form.course.errors }}
+				    	<label for="{{ form.course.id_for_label }}" class="col-sm-2 col-form-label">Course:</label>
+				    	<div class="col-sm-10">
+				      		{{ form.course }}
+				    	</div>
+				  	</div>
+  					<div class="form-group row">
+						{{ form.photo.errors }}
+    					<label for="{{ form.photo.id_for_label }}" class="col-sm-2 col-form-label">Photo: </label>
+    					<div class="col-sm-10">
+    						{{ form.photo }}
+  						</div>
+  					</div>
+  					<div class="form-group row">
+						{{ form.id_card.errors }}
+    					<label for="{{ form.id_card.id_for_label }}" class="col-sm-2 col-form-label">ID Card: </label>
+    					<div class="col-sm-10">
+    						{{ form.id_card }}
+  						</div>
+					</div>
+					<input type="submit" value="Register" class="btn btn-primary btn-lg">SUBMIT</input>
+				</form> 
+    			
+  			</div>
+		</div>
+	</div>
+	<br><br>
+	<!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="{% static 'js/animation-main.js' %}" type="text/javascript"></script>
+</body>
+</html>
+{% endblock %}

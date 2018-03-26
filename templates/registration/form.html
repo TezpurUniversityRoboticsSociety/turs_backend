@@ -24,46 +24,13 @@
                 <form class="site-form" id="contact" action=" " method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                         {{ form.non_field_errors }}
+                        {% for f in form %}
                         <div class="form-group">
-                            {{ form.name.errors }}
-                            <label for="{{ form.name.id_for_label }}">Name:</label>
-                            {{ form.name }}
+                            {{ f.name.errors }}
+                            <label for="{{ f.name.id_for_label }}">Name:</label>
+                            {{ f.name }}
                         </div>
-                        <div class="form-group">
-                            {{ form.roll.errors }}
-                            <label for="{{ form.roll.id_for_label }}">Roll no.:</label>
-                            {{ form.roll }}
-                        </div>
-                        <div class="form-group">
-                            {{ form.gender.errors }}
-                            <label for="{{ form.gender.id_for_label }}">Gender :</label>
-                            {{ form.gender }}
-                        </div>
-                        <div class="form-group">
-                            {{ form.email.errors }}
-                            <label for="{{ form.email.id_for_label }}">Email id :</label>
-                            {{ form.email }}
-                        </div>
-                        <div class="form-group">
-                            {{ form.phone.errors }}
-                            <label for="{{ form.phone.id_for_label }}">Phone no. :</label>
-                            {{ form.phone }}
-                        </div>
-                        <div class="form-group">
-                            {{ form.course.errors }}
-                            <label for="{{ form.course.id_for_label }}">Course:</label>
-                            {{ form.course }}
-                        </div>
-                        <div class="form-group">
-                            {{ form.photo.errors }}
-                            <label for="{{ form.photo.id_for_label }}">Photo :</label>
-                            {{ form.photo }}
-                        </div>
-                        <div class="form-group">
-                            {{ form.id_card.errors }}
-                            <label for="{{ form.id_card.id_for_label }}">ID card :</label>
-                            {{ form.id_card }}
-                        </div>
+                        {% endfor %}
                         <input type="submit" value="Register" class="btn btn-primary btn-lg">SUBMIT</input>        
                 </form> 
   			</div>

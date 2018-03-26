@@ -13,21 +13,23 @@
     <!-- Animate css -->
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
 
-
     <!-- Custom -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/tline.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto:100,400" rel="stylesheet">
+    
+
     <script src="https://use.typekit.net/bkt6ydm.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <!-- Angular Js -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'app.js' %}"></script>
     <script src="{% static 'js/MemberController.js' %}"></script>
+    {% block registration %}
+
+    {% endblock %}
  
-
-
 	<!-- Start WOWSlider.com HEAD section -->
 	<link rel="stylesheet" type="text/css" href="{% static 'engine0/style.css' %}" />
 	<script type="text/javascript" src="{% static 'engine0/jquery.js' %}"></script>
@@ -76,13 +78,10 @@
     {% block content %}
 
     {% endblock %}
+
     <!-- ***************** -->
     <!-- *****Footer****** -->
     <!-- ***************** -->
-    <div class="footer">
-        <h4 id="lsttxt">Made with <i class="fa fa-heart" aria-hidden="true"></i> in <strong>TU</strong></h4>
-    </div>
-
     <!-- Scripts -->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
