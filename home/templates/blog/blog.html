@@ -1,0 +1,22 @@
+{% extends "home/header.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        {% for post in object_list %}
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-block">
+                        <h3>{{post.title}}</h3>
+                        <h6>on {{post.date}}</h6>
+                            <div class = "container">
+                                {{ post.body|safe|linebreaks}}
+                            </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>        
+</div>
+
+{% endblock %}
