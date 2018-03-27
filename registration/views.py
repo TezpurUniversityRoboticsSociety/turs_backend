@@ -11,4 +11,4 @@ def register(request):
             # return redirect('registration:register')
     else:
         form = forms.Form()
-    return render(request,'registration/form.html',{'form':form})
+    return render(request,'registration/Registration.html',{'form':form})

@@ -1,0 +1,25 @@
+{% extends "home/header.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<title>My Blog</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+</head>
+<body>
+	{% for post in object_list %}
+		<h4>{{post.date}}</h4>
+
+		<h2>{{post.title}}</h2>
+
+		<p>{{ post.body|safe|linebreaks}}</p>
+
+		<hr></hr>
+	{% endfor %}
+
+</body>
+</html>
+{% endblock %}
