@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <head>
     {% load staticfiles %}
+    
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -27,8 +28,9 @@
                         {% for f in form %}
                         <div class="form-group">
                             {{ f.name.errors }}
-                            <label for="{{ f.name.id_for_label }}">Name:</label>
-                            {{ f.name }}
+                            <label for="{{ f.id_for_label }}">{{ f.label_tag }}</label>
+                            <!-- {{ f }}
+                            <input type="text" class="form-control" id="inputName" placeholder="Enter Full Name"> -->
                         </div>
                         {% endfor %}
                         <input type="submit" value="Register" class="btn btn-primary btn-lg">SUBMIT</input>        
