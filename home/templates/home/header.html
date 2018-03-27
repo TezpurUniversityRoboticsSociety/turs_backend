@@ -16,9 +16,7 @@
     <!-- Custom -->
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'css/tline.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto:100,400" rel="stylesheet">
-    
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto:100,400|Alegreya+Sans+SC:700" rel="stylesheet">
     <script src="https://use.typekit.net/bkt6ydm.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -26,20 +24,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="{% static 'app.js' %}"></script>
     <script src="{% static 'js/MemberController.js' %}"></script>
-    {% block registration %}
-
-    {% endblock %}
  
-	<!-- Start WOWSlider.com HEAD section -->
+
+
+	<!-- Start Slideshow HEAD section -->
 	<link rel="stylesheet" type="text/css" href="{% static 'engine0/style.css' %}" />
 	<script type="text/javascript" src="{% static 'engine0/jquery.js' %}"></script>
-	<!-- End WOWSlider.com HEAD section --></head>
+	<!-- End Slideshow HEAD section --></head>
 <body ng-app="myApp">
     
     <a href="top"></a>
 
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+     <!-- Header -->
+     <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
         <div class="container">
             <!-- Toggle Button for mobile view -->
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,22 +50,22 @@
                         <a class="nav-link navlinkcol1 slide-section" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navlinkcol1 slide-section" href="/about">About Us</a>
+                        <a class="nav-link navlinkcol1 slide-section" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navlinkcol1 slide-section" href="/objective">Objectives</a>
+                        <a class="nav-link navlinkcol1 slide-section" href="#objective">Objectives</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navlinkcol1 slide-section" href="/registration">Registration</a>
+                        <a class="nav-link navlinkcol1 slide-section" href="/registration" target="new">Registration</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navlinkcol1 slide-section" href="/blog">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navlinkcol1 slide-section" href="/workshops">Workshops</a>
+                        <a class="nav-link navlinkcol1 slide-section" href="#workshops">Workshops</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navlinkcol1 slide-section" href="/team">Team</a>
+                        <a class="nav-link navlinkcol1 slide-section" href="#team">Team</a>
                     </li>
                 </ul>
             </div>
