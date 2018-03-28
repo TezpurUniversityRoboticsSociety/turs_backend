@@ -35,7 +35,9 @@
 								{% else %}
 								<input type="{{ field.widget.input_type }}" class="form-control" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.html_name }}"/>
 								{% endif %}
-								{{ field.errors }}
+							</div>
+							<div class="col-sm-10">
+								<h6 style="padding-left: 10em;">{{ field.errors }}</h6>
 							</div>
 						</div>
                     {% endfor %} 
