@@ -25,7 +25,7 @@ SECRET_KEY = 'wx935)g(6g+++^+*7d6yo$#g*k-ps-^29g$miw6**4jlsk&dj9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sourishsarmah.pythonanywhere.com']
+ALLOWED_HOSTS = ['sourishsarmah.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
