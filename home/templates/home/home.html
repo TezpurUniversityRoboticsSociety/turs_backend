@@ -191,7 +191,6 @@
 
 
 
-    {% verbatim %}
     <!-- layer5 begins here -->
     <div id="team" class="layer5">
     <!-- Office bearer's -->
@@ -205,51 +204,37 @@
         <div ng-controller="MemberController">
             <div class="container">
                 <div class="row">
-                    <!-- ************************************ -->
-                    <!-- First Loop for core teacher's Members-->
-                    <!-- ************************************ -->
-                    <div class="col-md-3 col-sm-6 " ng-repeat="Teacher in coreTeamTeachers"> 
-                        <div class="card {{ Teacher.cardClass }}">
-                            <div id="circle">
-                                <img id ="dp" src="{{ Teacher.img }}">
-                            </div>
-                            <div class="overlay">
-                                <div class="icons">
-                                    <span><a href="{{ Teacher.link }}" target="_blank"><i class="icon fa fa-external-link" style="color:white" aria-hidden="true"></i></a></span>
-                                    <span><a href="{{ Teacher.mail }}" target="_blank"><i class="fa fa-envelope-open" style="color:white" aria-hidden="true"></i></a></span>
-                                </div>
-                            </div>
-                            <div class="container text1">
-                                <h4>{{ Teacher.name }}</h4> 
-                                <p>{{ Teacher.desig }}</p> 
-                            </div>
-                        </div>
-                    </div>
                     <!-- ************************** -->
                     <!-- Core Student Team member's -->
                     <!-- ************************** -->
-                    <div class="col-md-3 col-sm-6" ng-repeat="student in coreStudentMembers">
-                        <div class="card {{ student.cardClass }}">
+                    {% for Team in students %}
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card">
                             <div id="circle">
-                                <img id ="dp" src="{{ student.img }}">
-                            </div>
+                                <img id ="dp" src="{{ Team.photo.url }}">
+                            </div>	
                             <div class="overlay">
                                 <div class="icons">
-                                    <span><a href="{{ student.github }}" target="_blank"><i class="fa fa-github" style="color:white" aria-hidden="true"></i></a></span>
-                                    <span><a href="{{ student.linkedin }}" target="_blank"><i class="fa fa-linkedin" style="color:white" aria-hidden="true"></i></a></span>
-                                    <span><a href="{{ student.facebook }}" target="_blank"><i class="fa fa-facebook" style="color:white" aria-hidden="true"></i></a></span>
+                                    {% if Team.designation == 'President' or Team.designation == 'Vice President' or Team.designation == 'Technical Team Director' %}
+                                        <span><a href="{{ Teacher.github }}" target="_blank"><i class="icon fa fa-external-link" style="color:white" aria-hidden="true"></i></a></span>
+                                        <span><a href="{{ Teacher.linkedin }}" target="_blank"><i class="fa fa-envelope-open" style="color:white" aria-hidden="true"></i></a></span>
+                                    {% else %}
+                                        <span><a href="{{ Team.github }}" target="_blank"><i class="fa fa-github" style="color:white" aria-hidden="true"></i></a></span>
+                                        <span><a href="{{ Team.linkedin }}" target="_blank"><i class="fa fa-linkedin" style="color:white" aria-hidden="true"></i></a></span>
+                                        <span><a href="{{ Team.facebook }}" target="_blank"><i class="fa fa-facebook" style="color:white" aria-hidden="true"></i></a></span>
+                                    {% endif%}
                                 </div>
                             </div>
                             <div class="container text1">
-                                <h4>{{ student.name }}</h4> 
-                                <p>{{ student.desig }}</p> 
+                                <h4>{{ Team.name }}</h4> 
+                                <p class="small-text">{{Team.designation }}</p> 
                             </div>
                         </div>
                     </div>
-
+                    {% endfor %}
                 </div>
             </div>
-
+            {% verbatim %}
             <!-- ************************** -->
             <!-- ********Web Team********** -->
             <!-- ************************** -->
@@ -279,11 +264,11 @@
                     </div>
                 </div>
             </div>
-
+            {% endverbatim %}
         </div>
     </div>
     <!-- layer5 ends here -->
-    {% endverbatim %}
+
 
     <!-- ***************** -->
     <!-- *****Footer****** -->

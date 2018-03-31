@@ -1,16 +1,18 @@
 from django.db import models
+from django.conf import settings
+import os
 
 # Create your models here.
-class Student(models.Model):
+class Member(models.Model):
     SEX = [
         ('Male', 'Male'),
         ('Female', 'Female'),
         ('Others', 'Others'),
     ]
     TYPE = [
-        ('Teacher', 'Teacher'),
-        ('Student Executive Member', 'Student Executive Member'),
+        ('Executive Member', 'Executive Member'),
         ('Member', 'Member'),
+        ('Alumni', 'Alumni'),
     ]
     name = models.CharField(max_length=140,blank=False)
     roll = models.CharField(max_length=8,blank=False)
@@ -18,8 +20,8 @@ class Student(models.Model):
     course = models.CharField(max_length=20,blank=False)
     phone = models.IntegerField(blank=False)
     email = models.EmailField(max_length=100,blank=False)
-    photo = models.ImageField(default='defaut.png',blank=True, null=True)
-    id_card = models.ImageField(default='defaut.png',blank=True, null=True)
+    photo = models.ImageField(default='default.png',blank=True, null=True)
+    id_card = models.ImageField(default='default.png',blank=True, null=True)
     membership = models.CharField(max_length=20,choices=TYPE,default='Member')
     designation = models.CharField(max_length=20,default='Member')
     facebook = models.CharField(max_length=100,blank=True,default='#')
