@@ -207,7 +207,7 @@
                     <!-- ************************** -->
                     <!-- Core Student Team member's -->
                     <!-- ************************** -->
-                    {% for Team in students %}
+                    {% for Team in executives %}
                     <div class="col-md-3 col-sm-6">
                         <div class="card">
                             <div id="circle">
@@ -216,8 +216,8 @@
                             <div class="overlay">
                                 <div class="icons">
                                     {% if Team.designation == 'President' or Team.designation == 'Vice President' or Team.designation == 'Technical Team Director' %}
-                                        <span><a href="{{ Teacher.github }}" target="_blank"><i class="icon fa fa-external-link" style="color:white" aria-hidden="true"></i></a></span>
-                                        <span><a href="{{ Teacher.email }}" target="_blank"><i class="fa fa-envelope-open" style="color:white" aria-hidden="true"></i></a></span>
+                                        <span><a href="{{ Team.github }}" target="_blank"><i class="icon fa fa-external-link" style="color:white" aria-hidden="true"></i></a></span>
+                                        <span><a href="mailto:{{ Team.email }}" target="_blank"><i class="fa fa-envelope-open" style="color:white" aria-hidden="true"></i></a></span>
                                     {% else %}
                                         <span><a href="{{ Team.github }}" target="_blank"><i class="fa fa-github" style="color:white" aria-hidden="true"></i></a></span>
                                         <span><a href="{{ Team.linkedin }}" target="_blank"><i class="fa fa-linkedin" style="color:white" aria-hidden="true"></i></a></span>
