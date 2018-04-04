@@ -1,5 +1,5 @@
-{% extends 'home/header.html' %}
-{% block content %}
+{% include 'home/header.html' %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,8 @@
 	<!-- Start Slideshow HEAD section -->
 	<link rel="stylesheet" type="text/css" href="{% static 'engine0/style.css' %}" />
 	<script type="text/javascript" src="{% static 'engine0/jquery.js' %}"></script>
-	<!-- End Slideshow HEAD section --></head>
+    <!-- End Slideshow HEAD section -->
+</head>
 <body ng-app="myApp">
     
     <a href="top"></a>
@@ -45,7 +46,7 @@
             </div>
             <h1 id="land_text"><span class="animated fadeIn">BUILD. </span><strong class="animated fadeIn" id="ani2">CREATE.</strong> <span class="animated fadeIn" id="ani3">LEARN.</span></h1>
             <h3 id="land_text2">Tezpur University's student led robotics club aimed at creating waves in the field of robotics.</h3>
-            <button type="button" class="btn btn-primary btn-lg animated" href="../#about">Explore</button>
+            <button type="button" class="btn btn-primary btn-lg animated"><a href="../#about">Explore</a></button>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
     </div>
@@ -288,5 +289,3 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>
-
-{% endblock %}
