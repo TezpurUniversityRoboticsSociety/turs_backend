@@ -1,4 +1,13 @@
 /*misc begins*/
+html{
+	font-size: 12px;
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 9.411764705882353px;
+    }
+}
 .text1{
   padding-top: 5%;
   text-align: center;
@@ -61,11 +70,195 @@
   }
 }
 /*navbar ends*/
+
+
+.example {
+      width:530px;
+      margin:0 auto;
+      position:absolute;
+ 
+    }
+    .parallax {
+      display:block;
+      position:relative;
+      width:325px;
+      height:840px;
+      margin: 0 0 0 -120px;
+      /*overflow:hidden;
+      padding:30px;*/
+      text-indent:-999px;
+      background:url(2.png) center center no-repeat;
+      float:left;
+    }
+    .parallax:first-child {
+      background-image:url(1.png);
+      width:400px;
+      height:400px;
+      margin:0 -160px 0 0;
+    }
+    .parallax .level {
+      display:block;
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      background-position:center center;
+      background-repeat:no-repeat;
+    } 
+    .parallax.enhanced,
+    .parallax.enhanced:first-child {
+      background:none;
+}
+.footer {
+  position: relative;
+  height: auto;
+  color: rgb(53, 54, 56);
+}
+
+.removed{
+  display: none;
+}
+@media screen and (max-width: 768px)
+  {
+
+    .layer1{
+  position: relative;
+  background: linear-gradient(to bottom right, rgb(252, 3, 3), rgb(8, 8, 8));
+  height:105vh;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+}
+    #land_text{
+  text-align: center;
+  padding-top: 0;
+  font-size: 4.5rem;
+  letter-spacing: 6px;
+  margin-top: 7%;
+   }
+.layer2bg .container{
+  padding-top: 1px;
+  font-size: 10rem;
+  color: black;
+}
+.top-to-bottom {
+    border-width: 0px;
+    height: 0px;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+}
+.fa-users, .fa-cubes, .fa-smile-o{
+  padding-top: 10px;
+  color: white;
+  font-size: 4.5rem !important;
+}
+.layer2{
+  padding-bottom: 5px;
+  position: relative;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+    .teachername
+    {
+      font-size: 15px;
+    }
+    .studentname
+    {
+      font-size:15px;
+    }
+    .member
+    {
+      font-size:20px;
+    }
+    .nav-link
+    {
+      color: white;
+    }
+    .navbar-light
+    {
+      background: #A11111;
+    }
+   .nav-item {
+      text-align: center;
+      font-size: 15px;
+      font-color: white;
+      letter-spacing: 2px;
+  }
+  .build
+  {
+    font-size: 35px;
+  }
+  #land_text2
+  {
+    padding: 19px;
+    font-size: 17px;
+  }
+  .btn-lg{
+  display: table;
+  margin: 8px auto; 
+  background: rgba(0,0,0,0);
+  border: 2px solid #FFFFFF;
+  width: 40%;  
+  height: 7%;
+  border-radius: 0%; 
+  color: white;
+}
+#lsttxt{
+  font-size: 12px;
+  margin-left: 35.5%;
+  margin-top: 7%;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+}
+.layer3 .main-text2 {
+  font-size: 30px;
+  padding-top: 5%;
+  margin-left: 23.5%;
+  align-content: center;
+  color:black;
+}
+.layer3{
+  position: relative;
+  background-color:#ffffff;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+  font-size:1.6rem;
+  padding-bottom: 40px;
+}
+.layer3 .main-text {
+  padding-top: 10%;
+}
+.layer2bg .main-text {
+  padding-top: 10%;
+  }
+
+.container {
+    padding: 2px 42px;
+}
+
+.text1{
+  padding-top: 2%;
+  text-align: center;
+  font-size: 11px;
+}
+#land_img{
+  width: 100%;
+  height: auto;
+  margin-top: 7%;
+  margin-left:0%;
+}
+
+.team-txt{
+  padding-top:10%;
+}
+}
 @media only screen and (min-width: 1024px)
 {
     .navbar  {
       height: 70px;
-      font-size: 120%;     
+      font-size: 1.4rem;     
       background: transparent; 
       display: block;
       position : fixed;
@@ -75,7 +268,7 @@
       transition: all ease .5s;
     }
     .navbar.shrink {
-      height: 70px;
+      height: 60px;
       transition: all ease .5s;
       
       background: white;
