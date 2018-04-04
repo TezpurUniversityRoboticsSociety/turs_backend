@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponseRedirect
 from . import forms
 
 # Create your views here.
@@ -8,7 +8,7 @@ def register(request):
         if form.is_valid():
             form.save()
             form.cleaned_data
-            # return redirect('registration:register')
+            return render(request, 'registration/success.html', {'form': form})
     else:
         form = forms.Form()
     return render(request,'registration/Registration.html',{'form':form})

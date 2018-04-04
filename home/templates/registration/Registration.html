@@ -37,20 +37,22 @@
 								{% endif %}
 							</div>
 							<div class="col-sm-10">
-								<h6 style="padding-left: 10em;">{{ field.errors }}</h6>
+								<h6 style="padding-left: 8em;">{{ field.errors }}</h6>
 							</div>
 						</div>
                     {% endfor %} 
 					<input type="submit" value="Register" class="btn btn-primary btn-lg"></input>
 				</form> 
-    			
+	
   			</div>
 		</div>
 	</div>
 	<br><br>
 	<!-- Scripts -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="{% static 'js/animation-main.js' %}" type="text/javascript"></script>
+	<script src="{% static 'js/animation-main.js' %}" type="text/javascript"></script>
+	<script src="{% static 'js/bootstrap/bootstrap.js' %}" type="text/javascript"></script>
 </body>
 </html>
 {% endblock %}
