@@ -121,24 +121,6 @@ html{
 }
 @media screen and (max-width: 768px)
 {
-
-.layer2{
-  padding-bottom: 5px;
-  position: relative;
-  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
-  }
-    .teachername
-    {
-      font-size: 15px;
-    }
-    .studentname
-    {
-      font-size:15px;
-    }
-    .member
-    {
-      font-size:20px;
-    }
     .nav-link
     {
       color: black;
@@ -150,7 +132,7 @@ html{
    .nav-item {
       text-align: center;
       font-size: 15px;
-      font-color: black;
+      color: black;
       letter-spacing: 2px;
   }
   .build
