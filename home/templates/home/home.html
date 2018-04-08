@@ -132,57 +132,18 @@
 		        </div>
 		        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 tline_text">
 		            <ul class="timeline timeline-centered">
+                        {% for event in events %}
 		                <li class="timeline-item">
 		                    <div class="timeline-info b_text">
-		                        <span>March 12, 2018</span>
+		                        <span>{{ event.date|date:'d b, Y' }}<br></span>
 		                    </div>
 		                    <div class="timeline-marker"></div>
 		                    <div class="timeline-content">
-		                        <h3 class="timeline-title b_text">Event Title</h3>
-		                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-		                            eu pede mollis pretium. Pellentesque ut neque.</p>
+		                        <h3 class="timeline-title b_text">{{ event.title }}</h3>
+		                        <p>{{ event.event }}</p>
 		                    </div>
-		                </li>
-		                <li class="timeline-item">
-		                    <div class="timeline-info b_text">
-		                        <span>March 23, 2018</span>
-		                    </div>
-		                    <div class="timeline-marker"></div>
-		                    <div class="timeline-content">
-		                        <h3 class="timeline-title b_text">Event Title</h3>
-		                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-		                            eu pede mollis pretium. Pellentesque ut neque. </p>
-		                    </div>
-		                </li>
-		                <li class="timeline-item period">
-		                    <div class="timeline-info"></div>
-		                    <div class="timeline-marker"></div>
-		                    <div class="timeline-content">
-		                        <h2 class="timeline-title b_text">April 2016</h2>
-		                    </div>
-		                </li>
-		                <li class="timeline-item">
-		                    <div class="timeline-info b_text">
-		                        <span>April 02, 2018</span>
-		                    </div>
-		                    <div class="timeline-marker"></div>
-		                    <div class="timeline-content">
-		                        <h3 class="timeline-title b_text">Event Title</h3>
-		                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-		                            eu pede mollis pretium. Pellentesque ut neque. </p>
-		                    </div>
-		                </li>
-		                <li class="timeline-item">
-		                    <div class="timeline-info b_text">
-		                        <span>April 28, 2018</span>
-		                    </div>
-		                    <div class="timeline-marker"></div>
-		                    <div class="timeline-content">
-		                        <h3 class="timeline-title b_text">Event Title</h3>
-		                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-		                            eu pede mollis pretium. Pellentesque ut neque. </p>
-		                    </div>
-		                </li>
+                        </li>
+                        {% endfor %}
 		            </ul>
 		        </div>
 		    </div>
