@@ -48,7 +48,7 @@
                     <!-- ************************************ -->
                     {% for student in members %}
                     <div class="col-md-3 col-sm-6 "> 
-                        <div class="card {{ student.cardClass }}">
+                        <div class="card {% cycle 'zeror-left animated' 'zeror-middle animated' 'zeror-middle animated' 'zeror-right animated' %}">
                             <div id="circle">
                                 <img id ="dp" src="{{ student.photo.url }}">
                             </div>
@@ -73,7 +73,7 @@
                 <div class="row">
                     {% for alumnus in alumni %}
                     <div class="col-md-3 col-sm-6">
-                        <div class="card {{ member.cardClass }}">
+                        <div class="card {% cycle 'zeror-left animated' 'zeror-middle animated' 'zeror-middle animated' 'zeror-right animated' %}">
                             <div id="circle">
                                 <img id ="dp" src="{{ alumnus.photo.url }}">
                             </div>	

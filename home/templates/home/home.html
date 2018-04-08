@@ -205,25 +205,44 @@
         <div ng-controller="MemberController">
             <div class="container">
                 <div class="row">
+                    <!-- ********************************* -->
+                    <!-- Executive Professor Team member's -->
+                    <!-- ********************************* -->
+                    {% for Prof in executive_prof %}
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card {% cycle 'zeror-left animated' 'zeror-middle animated' 'zeror-middle animated' 'zeror-right animated' %}">
+                            <div id="circle">
+                                <img id ="dp" src="{{ Prof.photo.url }}">
+                            </div>	
+                            <div class="overlay">
+                                <div class="icons">
+                                    <span><a href="{{ Prof.github }}" target="_blank"><i class="icon fa fa-external-link" style="color:white" aria-hidden="true"></i></a></span>
+                                    <span><a href="mailto:{{ Prof.email }}" target="_blank"><i class="fa fa-envelope-open" style="color:white" aria-hidden="true"></i></a></span>
+                                </div>
+                            </div>
+                            <div class="container text1">
+                                <h4>{{ Prof.name }}</h4> 
+                                <p class="small-text">{{Prof.designation }}</p> 
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
                     <!-- ************************** -->
                     <!-- Core Student Team member's -->
                     <!-- ************************** -->
-                    {% for Team in executives %}
+                    {% for Team in executive_stud %}
                     <div class="col-md-3 col-sm-6">
-                        <div class="card">
+                        <div class="card {% cycle 'zeror-left animated' 'zeror-middle animated' 'zeror-middle animated' 'zeror-right animated' %}">
                             <div id="circle">
                                 <img id ="dp" src="{{ Team.photo.url }}">
                             </div>	
                             <div class="overlay">
                                 <div class="icons">
-                                    {% if Team.designation == 'President' or Team.designation == 'Vice President' or Team.designation == 'Technical Team Director' %}
-                                        <span><a href="{{ Team.github }}" target="_blank"><i class="icon fa fa-external-link" style="color:white" aria-hidden="true"></i></a></span>
-                                        <span><a href="mailto:{{ Team.email }}" target="_blank"><i class="fa fa-envelope-open" style="color:white" aria-hidden="true"></i></a></span>
-                                    {% else %}
-                                        <span><a href="{{ Team.github }}" target="_blank"><i class="fa fa-github" style="color:white" aria-hidden="true"></i></a></span>
-                                        <span><a href="{{ Team.linkedin }}" target="_blank"><i class="fa fa-linkedin" style="color:white" aria-hidden="true"></i></a></span>
-                                        <span><a href="{{ Team.facebook }}" target="_blank"><i class="fa fa-facebook" style="color:white" aria-hidden="true"></i></a></span>
-                                    {% endif%}
+                                    <span><a href="{{ Team.github }}" target="_blank"><i class="fa fa-github" style="color:white" aria-hidden="true"></i></a></span>
+                                    <span><a href="{{ Team.linkedin }}" target="_blank"><i class="fa fa-linkedin" style="color:white" aria-hidden="true"></i></a></span>
+                                    <span><a href="{{ Team.facebook }}" target="_blank"><i class="fa fa-facebook" style="color:white" aria-hidden="true"></i></a></span>
                                 </div>
                             </div>
                             <div class="container text1">

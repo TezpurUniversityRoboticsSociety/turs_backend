@@ -30,7 +30,7 @@
 						<div class="form-group row">
 							<label for="{{ field.id_for_label }}" class="col-sm-2 col-form-label">{{ field.label_tag }}</label>
 							<div class="col-sm-10">
-								{% if field.id_for_label == "id_photo" or field.id_for_label == "id_id_card" or field.id_for_label == "id_gender"%}
+								{% if field.id_for_label == "id_photo" or field.id_for_label == "id_gender"%}
 									{{ field }}
 								{% else %}
 								<input type="{{ field.widget.input_type }}" class="form-control" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.html_name }}"/>
