@@ -39,7 +39,7 @@ hr.style-two {
 }
 .card h4{
 	color: black;
-	font-size: 120%;
+	font-size: 150%;
 	text-align: left;
 }
 /* On mouse-over, add a deeper shadow */
@@ -58,7 +58,7 @@ form{
 	padding-left: 4%;
 	color: black;
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 120%;
+	font-size: 150%;
 }
 input{
 	height: 80%;
