@@ -69,6 +69,7 @@ html{
     background: rgb(255, 0, 0);
   }
 }
+/*navbar ends*/
 
 /*layer1 begins*/
 #land_img{
@@ -264,7 +265,7 @@ hr.style-two {
 }
 .layer3 .card{
   height: auto;
-  width: 50%;
+  width: 54rem;
 }
 /*layer3 ends*/
 
@@ -387,7 +388,7 @@ span+span{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 0.5%;
   width: 5rem;
   height: auto;
@@ -497,7 +498,7 @@ span+span{
     {
       font-size:20px;
     }
-
+    
   .build
   {
     font-size: 35px;
@@ -569,6 +570,27 @@ span+span{
 .team-txt{
   padding-top:10%;
 }
+#foot_img{
+ 
+  margin-top: 5%;
+  margin-bottom: 0.1%;
+  width: 5rem;
+  height: auto;
+}
+
+#lsttxt{
+  padding-right: 35%;
+  font-size: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+}
+
+.footer {
+
+  height: auto;
+  color: rgb(53, 54, 56);
+}
 }
 @media only screen and (min-width: 1024px)
 {
@@ -588,7 +610,7 @@ span+span{
       transition: all ease .5s;
       
       background: white;
-      border-bottom: 1px solid black;
+      box-shadow: 3px 8px 16px 0 rgba(0,0,0,0.4);
     }
     .nav-item {
         margin-left: 20px;
@@ -605,3 +627,4 @@ span+span{
     }
 
 }
+
