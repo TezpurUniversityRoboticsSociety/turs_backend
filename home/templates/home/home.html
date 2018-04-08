@@ -86,7 +86,7 @@
     <div id="objective" class="layer3">
         <h3 class="main-text" style="color: #D30000"><strong>WHAT WE DO</strong></h3>
         <h1 class="main-text2 team-txt"><strong>Our Objectives</strong></h1>
-        <div class="container animated layer3-text fadeInUp removed">
+        <div class="container layer3-text">
             <p>
                 a) Its objectives shall be scientific, technology and educational in character. The Society shall strive for the 
                 advancement of the theory and practice of robotics and automation engineering, science and technology and for the 
@@ -210,7 +210,7 @@
                     <!-- ********************************* -->
                     {% for Prof in executive_prof %}
                     <div class="col-md-3 col-sm-6">
-                        <div class="card {% cycle 'zeror-left animated' 'zeror-middle animated' 'zeror-middle animated' 'zeror-right animated' %}">
+                        <div class="card {% cycle 'zeror-left' 'zeror-middle' 'zeror-middle' 'zeror-right' %}">
                             <div id="circle">
                                 <img id ="dp" src="{{ Prof.photo.url }}">
                             </div>	
@@ -234,7 +234,7 @@
                     <!-- ************************** -->
                     {% for Team in executive_stud %}
                     <div class="col-md-3 col-sm-6">
-                        <div class="card {% cycle 'zeror-left animated' 'zeror-middle animated' 'zeror-middle animated' 'zeror-right animated' %}">
+                        <div class="card {% cycle 'zeror-left' 'zeror-middle' 'zeror-middle' 'zeror-right' %}">
                             <div id="circle">
                                 <img id ="dp" src="{{ Team.photo.url }}">
                             </div>	
@@ -295,6 +295,7 @@
     <!-- ***************** -->
     <div class="footer">
         <br>
+        <img id="foot_img" src="{% static 'img/TULogo.png' %}">
         <h4 id="lsttxt"><strong>Tezpur University Robotics Society</strong> <br> 
         Department of CSE, School Of Engineering, <a style="color: black" href="http://www.tezu.ernet.in" target="new" > Tezpur University</a><br>
         Email: tursonline@gmail.com | <a style="color: black" href="../admin"> admin</a><br><br> 
