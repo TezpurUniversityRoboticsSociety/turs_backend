@@ -24,7 +24,7 @@ class Member(models.Model):
     
 
     name = models.CharField(max_length=140,blank=False)
-    roll = models.CharField(max_length=8,blank=True)
+    roll = models.CharField(max_length=8,blank=False)
     gender = models.CharField(max_length=6,choices=SEX,default='Others')
     course = models.CharField(max_length=25,blank=False)
     phone = models.IntegerField(blank=True,null=True)
