@@ -1,4 +1,3 @@
-
 $(document).scroll(function() {
 
 	var y=$(this).scrollTop();
@@ -18,19 +17,31 @@ $(document).scroll(function() {
 		}
  });
 
-
-
-
-$(document).ready(function() {
-	$('.slide-section').click(function(e) {
-		var linkHref = $(this).attr('href');	
+//Scroll to desired sections on nav-bar clicks
+$(document).ready(function(){
+	// Add smooth scrolling to all links
+	$(".slide-section").on('click', function(event) {
+  
+	  // Make sure this.hash has a value before overriding default behavior
+	  if (this.hash !== "") {
+		// Prevent default anchor click behavior
+		event.preventDefault();
+  
+		// Store hash
+		var hash = this.hash;
+  
+		// Using jQuery's animate() method to add smooth page scroll
+		// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 		$('html, body').animate({
-			scrollTop: $(linkHref).offset().top
+		  scrollTop: $(hash).offset().top
+		}, 'slow', function(){
+	 
+		  // Add hash (#) to URL when done scrolling (default click behavior)
+		  window.location.hash = hash;
 		});
-		e.preventDefault();
+	  } // End if
 	});
-});
-
+  });
 
 
 // For the first button to animate on hover
@@ -42,3 +53,13 @@ $(".btn-lg").hover(
 		$(this).removeClass("bounce");
 	}
 )
+
+// Go to ABOUT US section on clicking EXPLORE button
+  $(".btn-lg").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#about").offset().top},
+        'slow');
+});
+
+
+
