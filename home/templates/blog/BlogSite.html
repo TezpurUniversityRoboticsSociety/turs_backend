@@ -8,12 +8,12 @@
 
 </head>
 <body>
-	{% for post in object_list %}
+	{% for post in posts %}
 		<h4>{{post.date}}</h4>
 
 		<h2>{{post.title}}</h2>
 
-		<p>{{ post.body|safe|linebreaks}}</p>
+		<p>{{ post.body|safe|linebreaks }}</p>
 
 		<hr></hr>
 	{% endfor %}
