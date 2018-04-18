@@ -3,9 +3,8 @@
 <head>
 	{% load staticfiles %}
 	<title>My Blog</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-
 </head>
 <body>
 	{% for post in posts %}
@@ -13,7 +12,7 @@
 
 		<h2>{{post.title}}</h2>
 
-		<p>{{ post.body|safe|linebreaks }}</p>
+		<div class="first">{{ post.body|safe|linebreaks }}</div>
 
 		<hr></hr>
 	{% endfor %}
