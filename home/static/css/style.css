@@ -13,7 +13,7 @@ html{
   text-align: center;
   font-size: 11px;
 }
-/*misc ends*/ 
+/*misc ends*/
 .fill ul li a {
   position: relative;
 }
@@ -124,7 +124,7 @@ html{
   border: 2px solid #FFFFFF;
   width: 15%;
   height: 6%;
-  border-radius: 0%; 
+  border-radius: 0%;
   color: white;
   font-size: 1.8rem;
 }
@@ -198,12 +198,12 @@ hr.style-two {
 .top-to-bottom {
     border-width: 3px;
     border-style: solid;
-    -webkit-border-image: 
+    -webkit-border-image:
       -webkit-gradient(linear, 0 0, 0 100%, from(white), to(rgba(0, 0, 0, 0))) 1 100%;
-    -webkit-border-image: 
+    -webkit-border-image:
       -webkit-linear-gradient(white, rgba(0, 0, 0, 0)) 1 100%;
     -moz-border-image:
-      -moz-linear-gradient(white, rgba(0, 0, 0, 0)) 1 100%;    
+      -moz-linear-gradient(white, rgba(0, 0, 0, 0)) 1 100%;
     -o-border-image:
       -o-linear-gradient(white, rgba(0, 0, 0, 0)) 1 100%;
     border-image:
@@ -371,11 +371,14 @@ span+span{
 #dp{
 	border-radius: 50%;
 	max-width: 250%;
-	max-height: 250;
+	max-height: 250%;
 	margin-left: 36%;
 	margin-top: -15%;
 	margin-bottom: 5%;
-	padding: 5%;
+  padding: 5%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 #lsttxt{
   font-size: 12px;
@@ -403,7 +406,7 @@ span+span{
       width:530px;
       margin:0 auto;
       position:absolute;
- 
+
     }
     .parallax {
       display:block;
@@ -432,7 +435,7 @@ span+span{
       left:0;
       background-position:center center;
       background-repeat:no-repeat;
-    } 
+    }
     .parallax.enhanced,
     .parallax.enhanced:first-child {
       background:none;
@@ -498,7 +501,7 @@ span+span{
     {
       font-size:20px;
     }
-    
+
   .build
   {
     font-size: 35px;
@@ -510,12 +513,12 @@ span+span{
   }
   .btn-lg{
   display: table;
-  margin: 8px auto; 
+  margin: 8px auto;
   background: rgba(0,0,0,0);
   border: 2px solid #FFFFFF;
-  width: 40%;  
+  width: 40%;
   height: 7%;
-  border-radius: 0%; 
+  border-radius: 0%;
   color: white;
 }
 #lsttxt{
@@ -571,7 +574,7 @@ span+span{
   padding-top:10%;
 }
 #foot_img{
- 
+
   margin-top: 5%;
   margin-bottom: 0.1%;
   width: 5rem;
@@ -596,8 +599,8 @@ span+span{
 {
     .navbar  {
       height: 70px;
-      font-size: 1.4rem;     
-      background: transparent; 
+      font-size: 1.4rem;
+      background: transparent;
       display: block;
       position : fixed;
       max-height:80px !important;
@@ -608,7 +611,7 @@ span+span{
     .navbar.shrink {
       height: 60px;
       transition: all ease .5s;
-      
+
       background: white;
       box-shadow: 3px 8px 16px 0 rgba(0,0,0,0.4);
     }
@@ -617,7 +620,7 @@ span+span{
         letter-spacing: 2.5px;
         transition: 0.5s;
         color: black;
-        
+
     }
     .navlinkcol1{
       color: white;

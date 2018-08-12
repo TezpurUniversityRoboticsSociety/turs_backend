@@ -80,11 +80,14 @@ span+span{
 #dp{
 	border-radius: 50%;
 	max-width: 250%;
-	max-height: 250;
+	max-height: 250%;
 	margin-left: 36%;
 	margin-top: -15%;
 	margin-bottom: 5%;
-	padding: 5%;
+  padding: 5%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 #lsttxt{
   font-size: 12px;
