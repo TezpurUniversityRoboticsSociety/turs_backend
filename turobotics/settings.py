@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['turobotics.pythonanywhere.com','127.0.0.1']
 INSTALLED_APPS = [
     'home',
     'registration',
-    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
