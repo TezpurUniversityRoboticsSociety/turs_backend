@@ -30,6 +30,7 @@ class Member(models.Model):
     phone = models.IntegerField(blank=True,null=True)
     email = models.EmailField(max_length=100,blank=False)
     photo = models.ImageField(default='default.png',blank=False, null=True, validators=[validate_image])
+    transaction_id = models.CharField(max_length=25,blank=False,default="NO Transaction ID provided")
     membership = models.CharField(max_length=20,choices=TYPE,default='Member')
     designation = models.CharField(max_length=30,default='Member')
     github = models.URLField(max_length=100,blank=True)
