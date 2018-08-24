@@ -2,58 +2,87 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	{% load staticfiles %}
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>T.U.R.S. Registration</title>
-	 <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700|Josefin+Sans" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/reg.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:700|Josefin+Sans" rel="stylesheet">
 
-     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 </head>
-<body> 
+
+<body>
 	<div class="container">
 		<h4>REGISTRATION</h4>
 		<h2>Join the T.U.R.S. Family</h2>
-		<hr class="style-two"></hr>
+		<hr class="style-two">
 		<div class="card">
-  			<div class="container">
-    			<h4><b>REGISTRATION FORM</b></h4>
-    			<form class="site-form" id="contact" action=" " method="post" enctype="multipart/form-data">
-					{% csrf_token %}
-					{{ form.non_field_errors }}
-					{% for field in form %}
-						<div class="form-group row">
-							<label for="{{ field.id_for_label }}" class="col-sm-2 col-form-label">{{ field.label_tag }}</label>
-							<div class="col-sm-10">
-								{% if field.id_for_label == "id_photo" or field.id_for_label == "id_gender"%}
-									{{ field }}
-								{% else %}
-								<input type="{{ field.widget.input_type }}" class="form-control" id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.html_name }}"/>
-								{% endif %}
-							</div>
-							<div class="col-sm-10">
-								<h6 style="padding-left: 8em;">{{ field.errors }}</h6>
+			<div class="container">
+				<h4><b>REGISTRATION FORM</b></h4>
+				<form class="site-form" id="contact" action=" " method="post" enctype="multipart/form-data">
+					{% csrf_token %} {{ form.non_field_errors }} {% for field in form %}
+					<div class="form-group row">
+						<label for="{{ field.id_for_label }}" class="col-sm-2 col-form-label">{{ field.label_tag }}</label>
+						<div class="col-sm-10">
+							{% if field.id_for_label == "id_photo" or field.id_for_label == "id_gender"%} {{ field }} {% else %}
+							<input type="{{ field.widget.input_type }}" class="form-control" id="{{ field.id_for_label }}" placeholder="{{ field.label }}"
+							 name="{{ field.html_name }}" /> {% endif %}
+						</div>
+						<div class="col-sm-10">
+							<h6 style="padding-left: 8em;">{{ field.errors }}</h6>
+						</div>
+					</div>
+					{% endfor %}
+					<div>
+						<h6 data-toggle="modal" data-target="#myModal"><a href="">Bank Details</a></h6>
+					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog">
+
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title">Bank Details</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+								<div class="modal-body">
+									<p>Account Holder : TEZPUR UNIVERSITY ROBOTICS SOCIETY</p>
+									<p>Account no. : 31404639652</p>
+									<p>Branch Code : 195</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-dark" data-dismiss="modal" style="width: 30%; margin-right: 30%">Close</button>
+								</div>
 							</div>
 						</div>
-                    {% endfor %} 
-					<input type="submit" value="Register" class="btn btn-primary btn-lg"></input>
-				</form> 
-	
-  			</div>
+					</div>
+
+					<input type="submit" value="Register" class="btn btn-primary btn-lg">
+				</form>
+
+			</div>
 		</div>
 	</div>
 	<br><br>
 	<!-- Scripts -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="{% static 'js/bootstrap/bootstrap.js' %}" type="text/javasript"></script>
-    <script src="https://use.fontawesome.com/4d6156a8c1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
+	<script src="{% static 'js/bootstrap/bootstrap.js' %}" type="text/javasript"></script>
+	<script src="https://use.fontawesome.com/4d6156a8c1.js"></script>
+
 </body>
+
 </html>
